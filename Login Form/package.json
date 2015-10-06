@@ -1,0 +1,44 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "UI Library - Login Form",
+  "styles": "assets/css/main.css",
+  "sass": "assets/scss/main.scss",
+  "main": "index.jade",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyhqtran/UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andyhqtran/UI/issues"
+  },
+  "author": {
+    "name": "Andy Tran",
+    "email": "hello@andytran.me",
+    "url": "http://andytran.me"
+  },
+  "keywords": [
+    "contact-form",
+    "css",
+    "sass",
+    "jade",
+    "responsive",
+    "web"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^6.0.3",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jade": "^0.15.0",
+    "grunt-contrib-sass": "^0.9.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.6.0",
+    "load-grunt-tasks": "^3.2.0"
+  }
+}

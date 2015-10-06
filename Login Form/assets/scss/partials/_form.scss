@@ -1,0 +1,234 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba($black, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.form {
+  z-index: 15;
+  position: relative;
+  background: $white;
+  width: $max-width;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 100px auto;
+  overflow: hidden;
+
+  // Toggle
+  &-toggle {
+    z-index: 10;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    background: $white;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    transform-origin: center;
+    transform: translate(0, -25%) scale(0);
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 4px;
+      background: $accent;
+      transform: translate(-50%, -50%);
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &.visible {
+      transform: translate(0, -25%) scale(1);
+      opacity: 1;
+    }
+  }
+
+  &-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 20px;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    label {
+      display: block;
+      margin: 0 0 10px;
+      color: $gray;
+      font-size: 12px;
+      font-weight: $semibold;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+
+      .two & {
+        color: $white;
+      }
+    }
+
+    input {
+      outline: none;
+      display: block;
+      background: rgba($black, 0.1);
+      width: 100%;
+      border: 0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      padding: 12px 20px;
+      color: $gray;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: $semibold;
+      line-height: inherit;
+      transition: 0.3s ease;
+
+      &:focus {
+        color: $dark-gray;
+      }
+
+      .two & {
+        color: $white;
+
+        &:focus {
+          color: $white;
+        }
+      }
+    }
+
+    button {
+      outline: none;
+      background: $accent;
+      width: 100%;
+      border: 0;
+      border-radius: 4px;
+      padding: 12px 20px;
+      color: $white;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: $semibold;
+      line-height: inherit;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      .two & {
+        background: $white;
+        color: $accent;
+      }
+    }
+
+    .form-remember {
+      font-size: 12px;
+      font-weight: $regular;
+      letter-spacing: 0;
+      text-transform: none;
+
+      input[type='checkbox'] {
+        display: inline-block;
+        width: auto;
+        margin: 0 10px 0 0;
+      }
+    }
+
+    .form-recovery {
+      color: $accent;
+      font-size: 12px;
+      text-decoration: none;
+    }
+  }
+
+  // Panel
+  &-panel {
+    padding: 60px calc(5% + 60px) 60px 60px;
+    box-sizing: border-box;
+
+    // Panel One
+    &.one {
+      &:before {
+        @extend .overlay;
+
+        content: '';
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+      }
+
+      &.hidden {
+        &:before {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+
+    // Panel Two
+    &.two {
+      z-index: 5;
+      position: absolute;
+      top: 0;
+      left: 95%;
+      background: $accent;
+      width: 100%;
+      min-height: 100%;
+      padding: 60px calc(10% + 60px) 60px 60px;
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        left: 93%;
+        box-shadow: 0 0 10px rgba($black, 0.2);
+      }
+
+      &.active {
+        left: 10%;
+        box-shadow: 0 0 10px rgba($black, 0.2);
+        cursor: default;
+      }
+    }
+  }
+
+  // Header
+  &-header {
+    margin: 0 0 40px;
+
+    h1 {
+      padding: 4px 0;
+      color: $accent;
+      font-size: 24px;
+      font-weight: $bold;
+      text-transform: uppercase;
+
+      .two & {
+        position: relative;
+        z-index: 40;
+        color: $white;
+      }
+    }
+  }
+
+  // Content
+  &-content {}
+
+  &-footer {}
+}

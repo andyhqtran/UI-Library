@@ -1,0 +1,82 @@
+doctype html
+html
+	head
+		// Meta
+		meta(charset='utf-8')
+		meta(author='' content='Andy Tran')
+
+		// Title
+		title Login Form
+
+		// Fonts
+		link(type='text/css'
+    		 media='screen'
+    		 rel='stylesheet'
+    		 href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700')
+
+		// Stylesheet
+		link(type='text/css'
+				 media='screen'
+				 rel='stylesheet'
+				 href='assets/css/main.css')
+	body
+		.form
+			.form-toggle
+			.form-panel.one
+				.form-header
+					h1 Account Login
+				.form-content
+					form
+						.form-group
+							label(for='username') Username
+							input(type='text'
+										id='username'
+										name='username'
+										required)
+						.form-group
+							label(for='password') Password
+							input(type='password'
+										id='password'
+										name='password'
+										required)
+						.form-group
+							label.form-remember
+								input(type='checkbox')
+								| Remember Me
+							a.form-recovery(href='#') Forgot Password?
+						.form-group
+							button(type='submit') Log In
+			.form-panel.two
+				.form-header
+					h1 Register Account
+				.form-content
+					form
+						.form-group
+							label(for='username') Username
+							input(type='text'
+										id='username'
+										name='username'
+										required)
+						.form-group
+							label(for='password') Password
+							input(type='password'
+										id='password'
+										name='password'
+										required)
+						.form-group
+							label(for='cpassword') Confirm Password
+							input(type='password'
+										id='cpassword'
+										name='cpassword'
+										required)
+						.form-group
+							label(for='email') Email Address
+							input(type='email'
+										id='email'
+										name='email'
+										required)
+						.form-group
+							button(type='submit') Log In
+
+		script(src='assets/js/jquery-2.1.4.min.js')
+		script(src='assets/js/script.js')
