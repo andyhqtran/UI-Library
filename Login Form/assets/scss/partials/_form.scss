@@ -195,15 +195,42 @@
       transition: 0.3s ease;
       cursor: pointer;
 
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 1.5%;
+        background: rgba($white, 0.2);
+        height: 30px;
+        width: 2px;
+        transition: 0.3s ease;
+      }
+
+      &:after {
+        left: 3%;
+      }
+
       &:hover {
         left: 93%;
         box-shadow: 0 0 10px rgba($black, 0.2);
+
+        &:before,
+        &:after {
+          opacity: 0;
+        }
       }
 
       &.active {
         left: 10%;
         box-shadow: 0 0 10px rgba($black, 0.2);
         cursor: default;
+
+        &:before,
+        &:after {
+          opacity: 0;
+        }
       }
     }
   }
