@@ -96,6 +96,7 @@
     });
 
 
+    grunt.registerTask('build', ['sass', 'postcss', 'cssmin', 'jade']);
     grunt.registerTask('default', ['connect:server', 'watch']);
 
   };
