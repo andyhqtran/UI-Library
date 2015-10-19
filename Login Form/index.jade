@@ -6,7 +6,7 @@ html
 		meta(author='' content='Andy Tran')
 
 		// Title
-		title Login Form
+		title Login Form &middot; UI Library
 
 		// Fonts
 		link(type='text/css'
@@ -20,63 +20,96 @@ html
 				 rel='stylesheet'
 				 href='assets/css/main.css')
 	body
+		// Form
 		.form
+
+			// Form Toggle
 			.form-toggle
+
+			// Form Panel (One)
 			.form-panel.one
+
+				// Form Header
 				.form-header
 					h1 Account Login
+
+				// Form Content
 				.form-content
 					form
+
+						// Form Group
 						.form-group
 							label(for='username') Username
 							input(type='text'
 										id='username'
 										name='username'
 										required)
+
+						// Form Group
 						.form-group
 							label(for='password') Password
 							input(type='password'
 										id='password'
 										name='password'
 										required)
+
+						// Form Group
 						.form-group
 							label.form-remember
 								input(type='checkbox')
 								| Remember Me
 							a.form-recovery(href='#') Forgot Password?
+
+						// Form Group
 						.form-group
 							button(type='submit') Log In
+
+			// Form Panel (Two)
 			.form-panel.two
+
+				// Form Header
 				.form-header
 					h1 Register Account
+
+				// Form Content
 				.form-content
 					form
+
+						// Form Group
 						.form-group
 							label(for='username') Username
 							input(type='text'
 										id='username'
 										name='username'
 										required)
+
+						// Form Group
 						.form-group
 							label(for='password') Password
 							input(type='password'
 										id='password'
 										name='password'
 										required)
+
+						// Form Group
 						.form-group
 							label(for='cpassword') Confirm Password
 							input(type='password'
 										id='cpassword'
 										name='cpassword'
 										required)
+						// Form Group
 						.form-group
 							label(for='email') Email Address
 							input(type='email'
 										id='email'
 										name='email'
 										required)
+
+						// Form Group
 						.form-group
 							button(type='submit') Log In
 
+		// Scripts
 		script(src='assets/js/jquery-2.1.4.min.js')
 		script(src='assets/js/script.js')
