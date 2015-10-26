@@ -1,0 +1,22 @@
+/*!
+ * Project Template
+ * Created by Andy Tran (http://andytran.me)
+ * Copyright 2015 Andy Tran.
+ * Licensed under MIT (https://github.com/andyhqtran/UILibrary/blob/master/LICENSE)
+ */
+
+// Variables
+@import "base/variables";
+
+// Reset CSS
+@import "vendors/reset";
+
+body {
+  background: #F2F2F2;
+  color: $gray;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
