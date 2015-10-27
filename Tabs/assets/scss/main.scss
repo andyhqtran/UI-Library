@@ -21,5 +21,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+// Ripple
+@import "partials/ripple";
+
 // Tabs
 @import "partials/tabs";

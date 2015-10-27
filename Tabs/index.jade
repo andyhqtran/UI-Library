@@ -6,7 +6,7 @@ html
     meta(author='' content='Andy Tran')
 
     // Title
-    title Tabs &middot; UI - Library
+    title Tabs &middot; UI Library
 
     // Fonts
     link(type='text/css'
@@ -20,6 +20,45 @@ html
          rel='stylesheet'
          href='assets/css/main.css')
   body
+    // Tabs
+    .tabs
+
+      // Tabs Header
+      .tabs-header
+        ul
+          li.active: a(href='#tab-1'
+                       tab-id='1'
+                       ripple
+                       ripple-color='#FFF') Tab 1
+          li: a(href='#tab-2'
+                tab-id='2'
+                ripple
+                ripple-color='#FFF') Tab 2
+          li: a(href='#tab-3'
+                tab-id='3'
+                ripple
+                ripple-color='#FFF') Tab 3
+          li: a(href='#tab-4'
+                tab-id='4'
+                ripple
+                ripple-color='#FFF') Tab 4
+          li: a(href='#tab-5'
+                tab-id='5'
+                ripple
+                ripple-color='#FFF') Tab 5
+
+      // Tabs Content
+      .tabs-content
+        .tab.active(tab-id='1')
+          | 1. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Ellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
+        .tab(tab-id='2')
+          | 2. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
+        .tab(tab-id='3')
+          | 3. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
+        .tab(tab-id='4')
+          | 4. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
+        .tab(tab-id='5')
+          | 5. Donec ullamcorper nulla non metus auctor fringilla. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor.
 
     // Scripts
     script(src='assets/js/jquery-2.1.4.min.js')

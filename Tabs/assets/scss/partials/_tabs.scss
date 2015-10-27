@@ -1,0 +1,56 @@
+.tabs {
+  z-index: 15px;
+  position: relative;
+  background: $white;
+  width: $max-width;
+  border-radius: 4px;
+  box-shadow: 0 0 30px rgba($black, .1);
+  box-sizing: border-box;
+  margin: 100px auto;
+  overflow: hidden;
+
+  // Tabs Header
+  &-header {
+    background: $primary;
+
+    // List
+    ul {
+      display: flex;
+    }
+
+    // List Item
+    li {
+      transition: 0.3s ease;
+
+      // Active State
+      &.active {
+        box-shadow: inset 0 -2px 0 $accent;
+      }
+    }
+
+    // Anchor
+    a {
+      z-index: 1;
+      display: block;
+      box-sizing: border-box;
+      padding: 15px 20px;
+      color: $white;
+      font-weight: $semibold;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+
+  // Tabs Content
+  &-content {
+    padding: 15px 20px;
+
+    .tab {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

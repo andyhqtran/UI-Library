@@ -1,0 +1,27 @@
+// Ripple
+[ripple] {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+
+  .ripple {
+    position: absolute;
+    background: $white;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    animation: ripple 1.6s;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: scale(40);
+    opacity: 0;
+  }
+}
