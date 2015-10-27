@@ -38,12 +38,11 @@ $(document).ready(function () {
     $('.tabs-content').stop().css({
       height: tabHeight + 'px'
     });
-
-    return false;
   }
 
   animateTabHeight();
 
+  // Change Tab
   function changeTab() {
     var getTabId = $('.tabs-header .active a').attr('tab-id');
 
@@ -60,11 +59,7 @@ $(document).ready(function () {
       // Animate Height
       animateTabHeight();
     });
-
-    console.log(getTabId);
   }
-
-  // Change Tab
 
   // Tabs
   $('.tabs-header a').on('click', function (e) {
@@ -107,7 +102,8 @@ $(document).ready(function () {
   var tabCurrentItem = tabItems.filter('.active');
 
   // Next Button
-  $('#next').on('click', function () {
+  $('#next').on('click', function (e) {
+    e.preventDefault();
 
     var nextItem = tabCurrentItem.next();
 
@@ -124,7 +120,8 @@ $(document).ready(function () {
   });
 
   // Prev Button
-  $('#prev').on('click', function () {
+  $('#prev').on('click', function (e) {
+    e.preventDefault();
 
     var prevItem = tabCurrentItem.prev();
 
