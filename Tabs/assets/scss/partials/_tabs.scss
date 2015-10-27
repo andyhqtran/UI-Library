@@ -11,9 +11,19 @@
 
   // Tabs Header
   &-header {
+    position: relative;
     background: $accent;
 
-    // List
+    .border {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $secondary;
+      width: auto;
+      height: 2px;
+      transition: 0.3s ease;
+    }
+
     ul {
       display: flex;
     }
@@ -21,11 +31,6 @@
     // List Item
     li {
       transition: 0.3s ease;
-
-      // Active State
-      &.active {
-        box-shadow: inset 0 -2px 0 $secondary;
-      }
     }
 
     // Anchor
@@ -45,6 +50,7 @@
   &-content {
     position: relative;
     padding: 15px 20px;
+    transition: 0.3s ease;
     overflow: hidden;
 
     // Blurred Text Effect

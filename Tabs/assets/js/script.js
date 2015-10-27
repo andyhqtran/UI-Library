@@ -7,17 +7,37 @@
 
 $(document).ready(function () {
 
-  // Tab Height
+  // Intial Border Position
+  var activePos = $('.tabs-header .active').position();
+
+  // Change Position
+  function changePos() {
+
+    // Update Position
+    activePos = $('.tabs-header .active').position();
+
+    // Change Position & Width
+    $('.border').stop().css({
+      left: activePos.left,
+      width: $('.tabs-header .active').width()
+    })
+  }
+
+  changePos();
+
+  // Intial Tab Height
   var tabHeight = $('.tab.active').height();
 
   // Animate Tab Height
   function animateTabHeight() {
-    // Tab Height
+
+    // Update Tab Height
     tabHeight = $('.tab.active').height();
 
-    $('.tabs-content').stop().animate({
+    // Animate Height
+    $('.tabs-content').stop().css({
       height: tabHeight + 'px'
-    }, 300);
+    });
 
     return false;
   }
@@ -36,6 +56,8 @@ $(document).ready(function () {
 
     // Add Active State
     $(this).stop().parent().addClass('active');
+
+    changePos();
 
     // Remove Active State
     $('.tab').stop().fadeOut(300, function () {
