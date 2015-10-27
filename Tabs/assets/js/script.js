@@ -7,10 +7,28 @@
 
 $(document).ready(function () {
 
+  // Tab Height
+  var tabHeight = $('.tab.active').height();
+
+  // Animate Tab Height
+  function animateTabHeight() {
+    // Tab Height
+    tabHeight = $('.tab.active').height();
+
+    $('.tabs-content').stop().animate({
+      height: tabHeight + 'px'
+    }, 300);
+
+    return false;
+  }
+
+  animateTabHeight();
+
   // Tabs
   $('.tabs-header a').on('click', function (e) {
     e.preventDefault();
 
+    // Tab Id
     var tabId = $(this).attr('tab-id');
 
     // Remove Active State
@@ -19,15 +37,20 @@ $(document).ready(function () {
     // Add Active State
     $(this).stop().parent().addClass('active');
 
-    // Remove Active Class
+    // Remove Active State
     $('.tab').stop().fadeOut(300, function () {
+      // Remove Class
       $(this).removeClass('active');
     }).hide();
 
-    // Add Active Class
+    // Add Active State
     $('.tab[tab-id="' + tabId + '"]').stop().fadeIn(300, function () {
+      // Add Class
       $(this).addClass('active');
-    }).show();
+
+      // Animate Height
+      animateTabHeight();
+    });
   });
 
   // Ripple

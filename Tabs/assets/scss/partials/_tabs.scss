@@ -4,14 +4,14 @@
   background: $white;
   width: $max-width;
   border-radius: 4px;
-  box-shadow: 0 0 30px rgba($black, .1);
+  box-shadow: 0 0 30px rgba($black, 0.1);
   box-sizing: border-box;
   margin: 100px auto;
   overflow: hidden;
 
   // Tabs Header
   &-header {
-    background: $primary;
+    background: $accent;
 
     // List
     ul {
@@ -24,7 +24,7 @@
 
       // Active State
       &.active {
-        box-shadow: inset 0 -2px 0 $accent;
+        box-shadow: inset 0 -2px 0 $secondary;
       }
     }
 
@@ -43,11 +43,27 @@
 
   // Tabs Content
   &-content {
+    position: relative;
     padding: 15px 20px;
+    overflow: hidden;
 
+    // Blurred Text Effect
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 1px;
+      box-shadow: 0 0 20px 10px $white;
+    }
+
+    // Tab
     .tab {
       display: none;
 
+      // Active
       &.active {
         display: block;
       }
