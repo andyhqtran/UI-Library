@@ -52,4 +52,4 @@ After installing Node and Grunt, you can now install Git. If you already have it
 #### Step 6: Running Grunt
 1. From the current directory, run the following command: `grunt build`. This will compile the Jade and Scss files.
 2. Once everything is compiled, you can run the local server with the following command: `grunt`.
-3. With grunt running, you can head over to `localhost:3000` to view to login modal.
+3. With grunt running, you can head over to `localhost:3000` to view the `login modal`.
