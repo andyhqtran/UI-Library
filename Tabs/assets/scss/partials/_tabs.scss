@@ -63,6 +63,7 @@
     height: 100%;
     padding: 0 10px;
     color: $white;
+    user-select: none;
 
     // Fade
     &:before {
