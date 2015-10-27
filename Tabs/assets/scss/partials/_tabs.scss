@@ -13,6 +13,7 @@
   &-header {
     position: relative;
     background: $accent;
+    overflow: hidden;
 
     // Border
     .border {
@@ -28,6 +29,9 @@
     // List
     ul {
       display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: calc(100% - 68px);
     }
 
     // List Item
@@ -45,6 +49,35 @@
       font-weight: $semibold;
       text-decoration: none;
       text-transform: uppercase;
+    }
+  }
+
+  // Tabs Nav
+  &-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: $accent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    color: $white;
+
+    // Fade
+    &:before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      box-shadow: 0 0 20px 10px $accent;
+    }
+
+    // Arrows
+    i {
+      cursor: pointer;
     }
   }
 

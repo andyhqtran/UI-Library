@@ -1,6 +1,7 @@
-# Template
+# Tabs Modal
 
 ![Showcase](assets/img/Showcase.png)
+This is a material inspired tabs modal that gives the user a smooth transistion between each panel. The navigation features the iconic Material Design Ripple effect, along with a border that slides around to give the user a hint of which tab is active.
 
 #### Requirements
 * [Node.js](http://nodejs.org/)
@@ -36,7 +37,7 @@ After installing Node and Grunt, you can now install Git. If you already have it
 
 #### Step 4: Cloning Repo
 1. With everything installed, you can now clone the repo using the following command: `git clone git@github.com:andyhqtran/UI-Library.git`.
-2. Now with the repo cloned, you can navigate to it using the following command: `cd UI-Library/Template`.
+2. Now with the repo cloned, you can navigate to it using the following command: `cd UI-Library/Tabs`.
 3. Head over to step [#5](#step-5-installing-packages).
 
 -
@@ -50,4 +51,4 @@ After installing Node and Grunt, you can now install Git. If you already have it
 #### Step 6: Running Grunt
 1. From the current directory, run the following command: `grunt build`. This will compile the Jade and Scss files.
 2. Once everything is compiled, you can run the local server with the following command: `grunt`.
-3. With grunt running, you can head over to `localhost:3000` to view to `Template`.
+3. With grunt running, you can head over to `localhost:3000` to view the `tabs modal`.

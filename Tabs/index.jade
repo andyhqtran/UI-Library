@@ -12,7 +12,7 @@ html
     link(type='text/css'
          media='screen'
          rel='stylesheet'
-         href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700')
+         href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Material+Icons')
 
     // Stylesheet
     link(type='text/css'
@@ -29,7 +29,7 @@ html
         // Border
         .border
 
-        // Nav
+        // Tabs
         ul
           li.active: a(href='#tab-1'
                        tab-id='1'
@@ -51,6 +51,11 @@ html
                 tab-id='5'
                 ripple
                 ripple-color='#FFF') Tab 5
+
+        // Next & Prev Arrows
+        nav.tabs-nav
+          i.material-icons#prev &#xE314;
+          i.material-icons#next &#xE315;
 
       // Tabs Content
       .tabs-content

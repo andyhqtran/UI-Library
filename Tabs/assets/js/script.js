@@ -20,7 +20,7 @@ $(document).ready(function () {
     $('.border').stop().css({
       left: activePos.left,
       width: $('.tabs-header .active').width()
-    })
+    });
   }
 
   changePos();
@@ -44,6 +44,28 @@ $(document).ready(function () {
 
   animateTabHeight();
 
+  function changeTab() {
+    var getTabId = $('.tabs-header .active a').attr('tab-id');
+
+    // Remove Active State
+    $('.tab').stop().fadeOut(300, function () {
+      // Remove Class
+      $(this).removeClass('active');
+    }).hide();
+
+    $('.tab[tab-id=' + getTabId + ']').stop().fadeIn(300, function () {
+      // Add Class
+      $(this).addClass('active');
+
+      // Animate Height
+      animateTabHeight();
+    });
+
+    console.log(getTabId);
+  }
+
+  // Change Tab
+
   // Tabs
   $('.tabs-header a').on('click', function (e) {
     e.preventDefault();
@@ -59,6 +81,9 @@ $(document).ready(function () {
 
     changePos();
 
+    // Update Current Itm
+    tabCurrentItem = tabItems.filter('.active');
+
     // Remove Active State
     $('.tab').stop().fadeOut(300, function () {
       // Remove Class
@@ -73,6 +98,46 @@ $(document).ready(function () {
       // Animate Height
       animateTabHeight();
     });
+  });
+
+  // Tab Items
+  var tabItems = $('.tabs-header ul li');
+
+  // Tab Current Item
+  var tabCurrentItem = tabItems.filter('.active');
+
+  // Next Button
+  $('#next').on('click', function () {
+
+    var nextItem = tabCurrentItem.next();
+
+    tabCurrentItem.removeClass('active');
+
+    if (nextItem.length) {
+      tabCurrentItem = nextItem.addClass('active');
+    } else {
+      tabCurrentItem = tabItems.first().addClass('active');
+    }
+
+    changePos();
+    changeTab();
+  });
+
+  // Prev Button
+  $('#prev').on('click', function () {
+
+    var prevItem = tabCurrentItem.prev();
+
+    tabCurrentItem.removeClass('active');
+
+    if (prevItem.length) {
+      tabCurrentItem = prevItem.addClass('active');
+    } else {
+      tabCurrentItem = tabItems.last().addClass('active');
+    }
+
+    changePos();
+    changeTab();
   });
 
   // Ripple
