@@ -1,0 +1,51 @@
+/*!
+ * Project Template
+ * Created by Andy Tran (http://andytran.me)
+ * Copyright 2015 Andy Tran.
+ * Licensed under MIT (https://github.com/andyhqtran/UILibrary/blob/master/LICENSE)
+ */
+
+// Variables
+@import "base/variables";
+
+// Reset CSS
+@import "vendors/reset";
+
+// Mixins
+@import "base/mixins";
+
+body {
+  background: #F2F2F2;
+  color: $gray;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Container
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  max-width: 1280px;
+  margin: 100px auto;
+}
+
+// Card
+.card {
+  display: block;
+  background: $white;
+  width: 100px;
+  height: 100px;
+  margin: 0 12px 12px;
+}
+
+// Ripple
+@import "partials/elevation";
+
+// Ripple
+@import "partials/ripple";

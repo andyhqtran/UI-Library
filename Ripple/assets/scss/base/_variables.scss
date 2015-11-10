@@ -1,0 +1,30 @@
+// Font Family
+$body-font: "Roboto";
+
+// Font Weights
+$thin: 100;
+$light: 300;
+$regular: 400;
+$semibold: 500;
+$bold: 700;
+$ultra: 800;
+
+// Base Font
+$base-font-family: $body-font, sans-serif;
+$base-font-size: 14px;
+$base-font-weight: $regular;
+$base-line-height: 1.6em;
+
+// Colors
+$black: #000000;
+$dark-gray: rgba($black, 0.8);
+$gray: rgba($black, 0.6);
+$light-gray: rgba($black, 0.4);
+$lighter-gray: rgba($black, 0.2);
+$white: #FFFFFF;
+$accent: #4285F4;
+
+// Form Settings
+$max-width: 600px;
+$max-height: 400px;
+$gutters: 24px;
