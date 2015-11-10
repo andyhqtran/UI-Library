@@ -1,0 +1,9 @@
+// Total Levels
+$level: 5;
+
+// Elevation Attribute
+@for $i from 1 through $level {
+  [elevated='#{$i}'] {
+    @include elevation($i);
+  }
+}
