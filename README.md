@@ -5,7 +5,10 @@ This is a collection of UI's created by myself. The goal is to design and create
 -
 
 #### Library
+* [Elevation](https://github.com/andyhqtran/UI-Library/tree/master/Elevation) - Material design elevation sass mixin.
+* [Ripple](https://github.com/andyhqtran/UI-Library/tree/master/Ripple) - Material design ripple effect.
 * [Login Form](https://github.com/andyhqtran/UI-Library/tree/master/Login%20Form) - A material inspired login modal.
+* [Tabs](https://github.com/andyhqtran/UI-Library/tree/master/Tbas) - A material inspired tabs modal.
 
 -
 
