@@ -7,11 +7,11 @@
   .ripple {
     position: absolute;
     background: $white;
-    width: 12px;
-    height: 12px;
+    width: 60px;
+    height: 60px;
     border-radius: 100%;
     transform: scale(0);
-    animation: ripple 1.6s;
+    animation: ripple 2s;
   }
 }
 
@@ -22,7 +22,7 @@
   }
 
   100% {
-    transform: scale(40);
+    transform: scale(20);
     opacity: 0;
   }
 }
